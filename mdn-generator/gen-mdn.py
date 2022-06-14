@@ -1,4 +1,5 @@
 from urllib import request
+import os
 import re
 import json
 from pathlib import Path
@@ -8,10 +9,11 @@ url_prefix = "https://developer.mozilla.org"
 partern = re.compile("<.+?>")
 ptBlank = re.compile("\s{2,}")
 ptTrueBlank = re.compile(" {2,}")
+os.mkdir("temp")
 
 
 def fetchResources(url, v):
-    p = Path(v + ".html")
+    p = Path("temp/%s.html" % v)
     if p.exists():
         return p.read_text()
 
@@ -97,4 +99,3 @@ for k in ss:
     pass
 
 o.write_text(json.dumps(result, ensure_ascii=False))
-
