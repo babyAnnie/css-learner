@@ -11,14 +11,14 @@ export function logFinalAnswer(finalAnswer = null, searchKeyword = '') {
     // title and description
     log(' ' + chalk.white.bold.underline(finalAnswer?.name || ''))
     log('\n')
-    // 初始值
+    // initial value
     log(' ' + chalk.redBright(`初始值： ${finalAnswer?.["initial value"] || ''}`))
-    // 是否继承
+    // inherit
     log(' ' + chalk.cyanBright(`继承： ${finalAnswer?.inherit || ''}`))
-    // 适用元素
+    // applicable elements
     log(' ' + chalk.greenBright(`适用元素： ${finalAnswer?.["applicable elements"] || ''}`))
     log('\n')
-    // 描述
+    // desc & longDesc
     log(' ' + chalk.magentaBright(finalAnswer?.desc || ''))
     log(' ' + chalk.blackBright(finalAnswer?.longDesc || ''))
     log('\n')
