@@ -6,7 +6,7 @@
 
 [中文](https://github.com/babyAnnie/css-learner/blob/master/README.cn.md) | [English](https://github.com/babyAnnie/css-learner/blob/master/README.md)
 
-## Usage
+## :lemon:Usage
 
 I recommend installing the tool globally, so that you can make use of it no matter what project you're working on, but you can take out -g flag if you want to use it in particular projects instead:
 ```sh
@@ -18,12 +18,12 @@ Then, to kick off the explorer, type:
 css
 ```
 
-## License
+## :book:License
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg)](https://github.com/babyAnnie/css-learner/blob/master/LICENSE)
 
 
-## More
+## :avocado:More
 
 The CSS resource comes from the MDN documentation
 
