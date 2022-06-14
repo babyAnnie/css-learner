@@ -20,7 +20,7 @@ css
 
 ## License
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg)]()
+[![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg)](https://github.com/babyAnnie/css-learner/blob/master/LICENSE)
 
 
 ## More

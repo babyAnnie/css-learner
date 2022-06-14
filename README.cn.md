@@ -1,6 +1,6 @@
 # CSS终端工具 
 
-[![Version](https://runkit.io/bokub/npm-version/branches/master/chalk-animation?style=flat)](https://www.npmjs.com/package/css-learner)
+[![Version](https://runkit.io/bokub/npm-version/branches/master/css-learner?style=flat)](https://www.npmjs.com/package/css-learner)
 
 > 无需深入研究文档即可找到您需要的CSS属性！ ✨
 
@@ -20,7 +20,7 @@ css
 
 ## 许可证
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg)]()
+[![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg)](https://github.com/babyAnnie/css-learner/blob/master/LICENSE)
 
 ## 更多
 
