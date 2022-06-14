@@ -1,6 +1,6 @@
 {
   "name": "css-learner",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A css terminal query tool",
   "main": "./index.js",
   "bin": {
