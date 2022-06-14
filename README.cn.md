@@ -4,7 +4,7 @@
 
 > 无需深入研究文档即可找到您需要的CSS属性！ ✨
 
-[中文](./README.cn.md) | [English](./README.md)
+[中文](https://github.com/babyAnnie/css-learner/blob/master/README.cn.md) | [English](https://github.com/babyAnnie/css-learner/blob/master/README.md)
 
 ## 用法
 
@@ -18,7 +18,7 @@ npm i -g css-learner
 css
 ```
 
-## 许可证
+## 开源协议
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg)](https://github.com/babyAnnie/css-learner/blob/master/LICENSE)
 

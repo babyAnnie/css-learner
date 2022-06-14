@@ -4,7 +4,7 @@
 
 > Find the CSS property you need without digging into the documentation! ✨
 
-[中文](./README.cn.md) | [English](./README.md)
+[中文](https://github.com/babyAnnie/css-learner/blob/master/README.cn.md) | [English](https://github.com/babyAnnie/css-learner/blob/master/README.md)
 
 ## Usage
 
