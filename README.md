@@ -23,7 +23,7 @@ css
 [![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg)](https://github.com/babyAnnie/css-learner/blob/master/LICENSE)
 
 
-## :avocado: More
+## :four_leaf_clover: More
 
 The CSS resource comes from the MDN documentation
 
