@@ -1,17 +1,7 @@
-// import fs from 'fs';
-
-// let data = fs.readFileSync('./mdn.json').toString();
-// data = JSON.parse(data);
-
-// export const questions = [];
-
-
 import { mdnAnswers } from './lookup.js'
-
 
 const keys = Object.keys(mdnAnswers)
 export const keysStr = keys.join('');
-
 
 const mdnChoices = (answers) => {
   const input = answers["input"]
@@ -35,7 +25,6 @@ export const questions = [
     validate: function (input) {
       // Declare function as asynchronous, and save the done callback
       const done = this.async();
-
       // Do async stuff
       setTimeout(function () {
         if (typeof input !== 'string' || input === '') {
