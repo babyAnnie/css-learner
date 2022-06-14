@@ -2,12 +2,12 @@
   "name": "css-learner",
   "version": "1.0.10",
   "description": "A css terminal query tool",
-  "main": "./index.js",
+  "main": "./bin/index.js",
   "bin": {
-    "css": "./index.js"
+    "css": "./bin/index.js"
   },
   "scripts": {
-    "dev": "node index"
+    "dev": "node ./bin/index"
   },
   "keywords": [
     "css",
