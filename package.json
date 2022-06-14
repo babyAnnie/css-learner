@@ -1,6 +1,6 @@
 {
   "name": "css-learner",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A css terminal query tool",
   "main": "./index.js",
   "bin": {
@@ -24,5 +24,9 @@
     "inquirer": "^8.2.4"
   },
   "type": "module",
-  "preferGlobal": true
+  "preferGlobal": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/babyAnnie/css-learner"
+  }
 }

@@ -9,18 +9,18 @@ export function logFinalAnswer(finalAnswer = null, searchKeyword = '') {
   } else {
     log('\n')
     // title and description
-    log(' ' + chalk.white.bold.underline(finalAnswer.name))
+    log(' ' + chalk.white.bold.underline(finalAnswer?.name || ''))
     log('\n')
     // 初始值
-    log(' ' + chalk.redBright(`初始值： ${finalAnswer["initial value"]}`))
+    log(' ' + chalk.redBright(`初始值： ${finalAnswer?.["initial value"] || ''}`))
     // 是否继承
-    log(' ' + chalk.cyanBright(`继承： ${finalAnswer.inherit}`))
+    log(' ' + chalk.cyanBright(`继承： ${finalAnswer?.inherit || ''}`))
     // 适用元素
-    log(' ' + chalk.greenBright(`适用元素： ${finalAnswer["applicable elements"]}`))
+    log(' ' + chalk.greenBright(`适用元素： ${finalAnswer?.["applicable elements"] || ''}`))
     log('\n')
     // 描述
-    log(' ' + chalk.magentaBright(finalAnswer.desc))
-    log(' ' + chalk.blackBright(finalAnswer.longDesc))
+    log(' ' + chalk.magentaBright(finalAnswer?.desc || ''))
+    log(' ' + chalk.blackBright(finalAnswer?.longDesc || ''))
     log('\n')
 
     //create the box with the code example
@@ -30,7 +30,7 @@ export function logFinalAnswer(finalAnswer = null, searchKeyword = '') {
       borderColor: 'blackBright',
       backgroundColor: '#000000',
     }
-    const code = chalk.white('Grammar:\n\n') + chalk.cyan(finalAnswer.grammar)
+    const code = chalk.white('Grammar:\n\n') + chalk.cyan(finalAnswer?.grammar || '')
 
     const codeOutput = boxen(code, codeBox)
     log(codeOutput)
