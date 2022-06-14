@@ -1,0 +1,28 @@
+{
+  "name": "css-learner",
+  "version": "1.0.8",
+  "description": "A css terminal query tool",
+  "main": "./index.js",
+  "bin": {
+    "css": "./index.js"
+  },
+  "scripts": {
+    "dev": "node index"
+  },
+  "keywords": [
+    "css",
+    "node",
+    "front-end",
+    "terminal",
+    "tool"
+  ],
+  "author": "DDY",
+  "license": "MIT",
+  "dependencies": {
+    "boxen": "^6.2.1",
+    "chalk": "^5.0.1",
+    "inquirer": "^8.2.4"
+  },
+  "type": "module",
+  "preferGlobal": true
+}

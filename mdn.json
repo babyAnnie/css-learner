@@ -1,0 +1,29 @@
+{
+  "color": {
+    "name": "color",
+    "desc": "设置元素的文本或装饰的颜色",
+    "longDesc": "colorCSS 属性设置颜色值的前景色以及文本装饰，并设置currentcolor (en-US)值。currentcolor可以对其他颜色属性用作不直接的值，比如border-color。",
+    "grammar": "/* 关键词 */ \ncolor: currentcolor;\n\n/* <named-color>值 */ \ncolor: red;\ncolor: orange;\ncolor: tan;\ncolor: rebeccapurple;\n\n/* <hex-color>值 */ \ncolor: #090;\ncolor: #009900;\ncolor: #090a;\ncolor: #009900aa;\n\n/* <rgb()>值 */ \ncolor: rgb(34, 12, 64, 0.6);\ncolor: rgba(34, 12, 64, 0.6);\ncolor: rgb(34 12 64 / 0.6);\ncolor: rgba(34 12 64 / 0.3);\ncolor: rgb(34.0 12 64 / 60%);\ncolor: rgba(34.6 12 64 / 30%);\n\n/* <hsl()>值 */ \ncolor: hsl(30, 100%, 50%, 0.6);\ncolor: hsla(30, 100%, 50%, 0.6);\ncolor: hsl(30 100% 50% / 0.6);\ncolor: hsla(30 100% 50% / 0.6);\ncolor: hsl(30.0 100% 50% / 60%);\ncolor: hsla(30.2 100% 50% / 60%);\n\n/* 全局值 */ \ncolor: inherit;\ncolor: initial;\ncolor: unset;\n",
+    "initial value": "canvastext",
+    "inherit": true,
+    "applicable elements": "所有元素和文本。它也适用于 ::first-letter 和 ::first-line。"
+  },
+  "background-color": {
+    "name": "background-color",
+    "desc": "设置元素的背景颜色",
+    "longDesc": "设置元素的背景色，属性的值为颜色值或关键字transparent。",
+    "grammar": "/* Keyword values */ \nbackground-color: red;\n\n/* Hexadecimal value */ \nbackground-color: #bbff00;\n\n/* RGB value */ \nbackground-color: rgb(255, 255, 128);\n\n /* HSLA value */ \nbackground-color: hsla(50, 33%, 25%, 0.75);\n\n/* Special keyword values */ \nbackground-color: currentColor;\nbackground-color: transparent;\n\n/* Global values */ \nbackground-color: inherit;\nbackground-color: initial;\nbackground-color: unset;\n",
+    "initial value": "transparent",
+    "inherit": false,
+    "applicable elements": "all elements. It also applies to ::first-letter and ::first-line."
+  },
+  "width": {
+    "name": "width",
+    "desc": "设置元素的宽度",
+    "longDesc": "width 属性用于设置元素的宽度。width 默认设置内容区域的宽度，但如果 box-sizing 属性被设置为 border-box，就转而设置边框区域的宽度。",
+    "grammar": "/* <length> values */ \nwidth: 300px;\nwidth: 25em;\n\n/* <percentage> value */ \nwidth: 75%;\n\n/* Keyword values */ \nwidth: max-content;\nwidth: min-content;\nwidth: fit-content(20em);\nwidth: auto;\n\n/* Global values */ \nwidth: inherit;\nwidth: initial;\nwidth: unset;\n",
+    "initial value": "auto",
+    "inherit": false,
+    "applicable elements": "除未替换的内联元素、表格行和行组之外的所有元素"
+  }
+}
