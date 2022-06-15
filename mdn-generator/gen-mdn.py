@@ -75,15 +75,12 @@ def analyse_li(html, v):
             dom["inherit"] = tem[2].text
             dom["applicable elements"] = tem[1].text
 
-    if len(tem) == 0:
-        print("tbody read fail! break. key = " + v)
-
     return dom
 
 
 lang = input("input your language code (default: zh-CN): ").strip()
-lang = lang if len(lang) == 0 else "zh-CN"
-ss = fetchResources("/zh-CN/docs/Web/CSS", "root")
+lang = lang if len(lang) != 0 else "zh-CN"
+ss = fetchResources("/%s/docs/Web/CSS" % lang, "root")
 ss = analyse_content(ss)
 
 o = Path("mdn.json")
