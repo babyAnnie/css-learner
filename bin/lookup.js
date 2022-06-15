@@ -4,6 +4,12 @@ import { fileURLToPath } from 'url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-let data = fs.readFileSync(`${__dirname}/mdn.json`).toString();
-data = JSON.parse(data) || {};
-export const mdnAnswers = data;
+
+let cnData = fs.readFileSync(`${__dirname}/mdn_cn.json`).toString();
+cnData = JSON.parse(cnData) || {};
+export const mdnCnAnswers = cnData;
+
+
+let enData = fs.readFileSync(`${__dirname}/mdn_en.json`).toString();
+enData = JSON.parse(enData) || {};
+export const mdnEnAnswers = enData;

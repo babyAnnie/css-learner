@@ -1,13 +1,16 @@
 'use strict'
 import chalk from 'chalk'
 import boxen from 'boxen'
+
+import { messages } from './messages.js'
+
 const log = console.log
 
-export const greeting = () => {
+export const greeting = (language) => {
   //create initial message box
   const welcome =
     chalk.yellow(' ✿ ') +
-    chalk.cyanBright.bold('  Hello CSS tool! ') +
+    chalk.cyanBright.bold(messages[language].hello) +
     chalk.yellow(' ✿ ')
 
   const welcomeBox = {

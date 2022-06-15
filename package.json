@@ -4,7 +4,8 @@
   "description": "A css terminal query tool",
   "main": "./bin/index.js",
   "bin": {
-    "css": "./bin/index.js"
+    "css": "./bin/index.js",
+    "cssen": "./bin/index.js"
   },
   "scripts": {
     "dev": "node ./bin/index"

@@ -1,38 +1,43 @@
 import chalk from 'chalk'
 import boxen from 'boxen'
 
+import { messages } from './messages.js'
+
 const log = console.log
 
-export function logFinalAnswer(finalAnswer = null, searchKeyword = '') {
+export function logFinalAnswer(finalAnswer = null, searchKeyword = '', language = 'cn') {
   if (!finalAnswer) {
-    log(chalk.cyanBright(`Unknown css property: "${searchKeyword}"\n`))
+    log(chalk.cyanBright(`${messages[language].UnknownProperty}"${searchKeyword}"\n`))
   } else {
-    log('\n')
     // title and description
-    log(' ' + chalk.white.bold.underline(finalAnswer?.name || ''))
-    log('\n')
+    log(`\n ${chalk.white.bold.underline(finalAnswer?.name)}\n`)
     // initial value
-    log(' ' + chalk.redBright(`初始值： ${finalAnswer?.["initial value"] || ''}`))
+    finalAnswer?.["initial value"] && log(' ' + chalk.redBright(`${messages[language].initialValue} ${finalAnswer?.["initial value"]}`))
     // inherit
-    log(' ' + chalk.cyanBright(`继承： ${finalAnswer?.inherit || ''}`))
+    if (finalAnswer?.inherit) {
+      log(' ' + chalk.cyanBright(`${messages[language].inherit} ${finalAnswer?.inherit}`))
+    }
     // applicable elements
-    log(' ' + chalk.greenBright(`适用元素： ${finalAnswer?.["applicable elements"] || ''}`))
-    log('\n')
+    if (finalAnswer?.["applicable elements"]) {
+      log(' ' + chalk.greenBright(`${messages[language].applicableElements} ${finalAnswer?.["applicable elements"]}\n`))
+    }
     // desc & longDesc
-    log(' ' + chalk.magentaBright(finalAnswer?.desc || ''))
-    log(' ' + chalk.blackBright(finalAnswer?.longDesc || ''))
+    if (finalAnswer?.desc) {
+      log(` ${chalk.magentaBright(finalAnswer?.desc)}`)
+    }
+    if (finalAnswer?.longDesc) {
+      log(` ${chalk.blackBright(finalAnswer?.longDesc)}`)
+    }
     log('\n')
-
     //create the box with the code example
     const codeBox = {
       padding: 1,
       borderStyle: 'doubleSingle',
       borderColor: 'blackBright',
       backgroundColor: '#000000',
-    }
-    const code = chalk.white('Grammar:\n\n') + chalk.cyan(finalAnswer?.grammar || '')
-
-    const codeOutput = boxen(code, codeBox)
+    },
+      code = chalk.white(`${messages[language].grammar}\n\n`) + chalk.cyan(finalAnswer?.grammar || ''),
+      codeOutput = boxen(code, codeBox);
     log(codeOutput)
   }
 }
