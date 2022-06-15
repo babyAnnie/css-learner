@@ -1,11 +1,13 @@
 # CSS Terminal Tool
 
+[中文](https://github.com/babyAnnie/css-learner/blob/master/README.cn.md) | [English](https://github.com/babyAnnie/css-learner/blob/master/README.md)
+
 [![Version](https://runkit.io/bokub/npm-version/branches/master/css-learner?style=flat)](https://www.npmjs.com/package/css-learner)
 [![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg)](https://github.com/babyAnnie/css-learner/blob/master/LICENSE)
 
 > Find the CSS property you need without digging into the documentation! ✨
 
-[中文](https://github.com/babyAnnie/css-learner/blob/master/README.cn.md) | [English](https://github.com/babyAnnie/css-learner/blob/master/README.md)
+![gif](https://github.com/babyAnnie/css-learner/blob/master/css.gif)
 
 ## :lemon: Usage
 
