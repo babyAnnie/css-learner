@@ -5,7 +5,7 @@ import { messages } from './messages.js'
 
 const log = console.log
 
-export function logFinalAnswer(finalAnswer = null, searchKeyword = '', language = 'cn') {
+export function logFinalAnswer(finalAnswer = null, searchKeyword = '', language = 'en') {
   if (!finalAnswer) {
     log(chalk.cyanBright(`${messages[language].UnknownProperty}"${searchKeyword}"\n`))
   } else {
@@ -26,18 +26,18 @@ export function logFinalAnswer(finalAnswer = null, searchKeyword = '', language 
       log(` ${chalk.magentaBright(finalAnswer?.desc)}`)
     }
     if (finalAnswer?.longDesc) {
-      log(` ${chalk.blackBright(finalAnswer?.longDesc)}`)
+      log(` ${chalk.blackBright(finalAnswer?.longDesc)}\n`)
     }
-    log('\n')
     //create the box with the code example
-    const codeBox = {
-      padding: 1,
-      borderStyle: 'doubleSingle',
-      borderColor: 'blackBright',
-      backgroundColor: '#000000',
-    },
-      code = chalk.white(`${messages[language].grammar}\n\n`) + chalk.cyan(finalAnswer?.grammar || ''),
-      codeOutput = boxen(code, codeBox);
-    log(codeOutput)
+    if (finalAnswer?.grammar) {
+      const codeBox = {
+        padding: 1,
+        borderColor: 'blackBright',
+        backgroundColor: '#333333',
+      },
+        code = chalk.white(`${messages[language].grammar}\n\n`) + chalk.cyan(finalAnswer?.grammar),
+        codeOutput = boxen(code, codeBox);
+      log(codeOutput)
+    }
   }
 }

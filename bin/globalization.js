@@ -6,7 +6,7 @@ import { mdnCnAnswers, mdnEnAnswers } from './lookup.js'
 import { logFinalAnswer } from './logFinalAnswer.js'
 
 
-export const terminalQuery = (language = 'cn') => {
+export const terminalQuery = (language = 'en') => {
   // say hello
   greeting(language)
 

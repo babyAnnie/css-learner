@@ -5,7 +5,8 @@
   "main": "./bin/index.js",
   "bin": {
     "css": "./bin/index.js",
-    "cssen": "./bin/index.js"
+    "csscn": "./bin/indexcn.js",
+    "cssen": "./bin/indexen.js"
   },
   "scripts": {
     "dev": "node ./bin/index"

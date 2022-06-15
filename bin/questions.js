@@ -19,7 +19,7 @@ const mdnChoices = (answers) => {
 
 
 // language: cn | en
-export const generateQuestions = (language = 'cn') => {
+export const generateQuestions = (language = 'en') => {
   return [
     {
       type: 'input',
