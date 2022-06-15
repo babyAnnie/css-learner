@@ -11,6 +11,7 @@ const mdnChoices = (answers) => {
   let result = []
   for (let k of keys) {
     if (k.indexOf(input) !== -1) {
+      // if (k.startsWith(input)) {
       result.push(k)
     }
   }
@@ -47,8 +48,9 @@ export const generateQuestions = (language = 'en') => {
       message: messages[language].property,
       choices: mdnChoices,
       when(answers) {
-        const firstAnswer = answers["input"]
-        return !keys.includes(firstAnswer) && keysStr.indexOf(firstAnswer) !== -1
+        const firstAnswer = answers["input"],
+          result = mdnChoices(answers);
+        return !keys.includes(firstAnswer) && result.length > 0
       }
     },
   ]

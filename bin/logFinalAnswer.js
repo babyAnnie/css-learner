@@ -33,7 +33,7 @@ export function logFinalAnswer(finalAnswer = null, searchKeyword = '', language 
       const codeBox = {
         padding: 1,
         borderColor: 'blackBright',
-        backgroundColor: '#333333',
+        backgroundColor: '#000000',
       },
         code = chalk.white(`${messages[language].grammar}\n\n`) + chalk.cyan(finalAnswer?.grammar),
         codeOutput = boxen(code, codeBox);
