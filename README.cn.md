@@ -16,7 +16,7 @@
 npm i -g css-learner
 ```
 
-默认语言版本由node环境决定。终端输入css：
+默认语言版本由node环境决定。终端输入css:
 ```sh
 css
 ```
