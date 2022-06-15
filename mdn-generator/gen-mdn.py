@@ -9,7 +9,8 @@ url_prefix = "https://developer.mozilla.org"
 partern = re.compile("<.+?>")
 ptBlank = re.compile("\s{2,}")
 ptTrueBlank = re.compile(" {2,}")
-os.mkdir("temp")
+if not Path("temp").exists():
+    os.mkdir("temp")
 
 
 def fetchResources(url, v):
@@ -59,20 +60,24 @@ def analyse_li(html, v):
 
     dom = {}
     dom["desc"] = remove_all_blank(s[0].text)
-    dom["grammar"] = s[2].text
 
     for e in s:
-        bu = e.find_all("table", class_="properties")
-        if len(bu) != 0:
+        tem = e.find_all("div", class_="code-example")
+        if len(tem) != 0:
+            dom["grammar"] = tem[0].text
             break
-    if len(bu) == 0:
-        print("tbody read fail! break. key = " + v)
-        return dom
 
-    bu = bu[0].find_all("td")
-    dom["initial value"] = bu[0].text
-    dom["inherit"] = bu[2].text
-    dom["applicable elements"] = bu[1].text
+    for e in s:
+        tem = e.find_all("table", class_="properties")
+        if len(tem) != 0:
+            tem = tem[0].find_all("td")
+            dom["initial value"] = tem[0].text
+            dom["inherit"] = tem[2].text
+            dom["applicable elements"] = tem[1].text
+
+    if len(tem) == 0:
+        print("tbody read fail! break. key = " + v)
+
     return dom
 
 
