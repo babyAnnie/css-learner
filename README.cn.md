@@ -1,6 +1,7 @@
 # CSS终端工具 
 
 [![Version](https://runkit.io/bokub/npm-version/branches/master/css-learner?style=flat)](https://www.npmjs.com/package/css-learner)
+[![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg)](https://github.com/babyAnnie/css-learner/blob/master/LICENSE)
 
 > 无需深入研究文档即可找到您需要的CSS属性！ ✨
 
@@ -13,14 +14,18 @@
 npm i -g css-learner
 ```
 
-启动资源管理器，键入css：
+默认语言版本由node环境决定。终端输入css：
 ```sh
 css
 ```
-
-## :book: 开源协议
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg)](https://github.com/babyAnnie/css-learner/blob/master/LICENSE)
+使用中文版本的CSS终端工具
+```sh
+csscn
+```
+使用英文版本的CSS终端工具
+```sh
+cssen
+```
 
 ## :four_leaf_clover: 更多
 
