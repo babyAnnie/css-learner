@@ -1,9 +1,9 @@
 export const messages = {
   "cn": {
     "hello": "  你好 CSS 工具!",
-    "input": "输入要查询的CSS属性:",
-    "property": "选择你要查询的CSS属性:",
-    "requiresInput": "你需要输入css属性",
+    "input": "输入 CSS 属性:",
+    "property": "选择 CSS 属性:",
+    "requiresInput": "你需要输入 CSS 属性",
     "initialValue": "初始值:",
     "inherit": "是否继承:",
     "applicableElements": "适用元素:",

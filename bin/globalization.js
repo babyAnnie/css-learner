@@ -36,5 +36,4 @@ export const terminalQuery = (language = 'en') => {
         // Something else went wrong
       }
     });
-
 }
