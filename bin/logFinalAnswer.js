@@ -7,26 +7,28 @@ const log = console.log
 
 export function logFinalAnswer(finalAnswer = null, searchKeyword = '', language = 'en') {
   if (!finalAnswer) {
-    log(chalk.cyanBright(`${messages[language].UnknownProperty}"${searchKeyword}"\n`))
+    log(chalk.gray(`${messages[language].UnknownProperty}"${searchKeyword}"\n`))
   } else {
     // title and description
-    log(`\n ${chalk.white.bold.underline(finalAnswer?.name)}\n`)
+    log(`\n  ${chalk.bgHex('#096dd9').hex('#ffffff').bold(' ' + finalAnswer?.name + ' ')}\n`)
     // initial value
-    finalAnswer?.["initial value"] && log(' ' + chalk.redBright(`${messages[language].initialValue} ${finalAnswer?.["initial value"]}`))
+    if (finalAnswer?.["initial value"]) {
+      log('  ' + chalk.hex("#73d13d")(`${messages[language].initialValue} ${finalAnswer?.["initial value"]}`))
+    }
     // inherit
     if (finalAnswer?.inherit) {
-      log(' ' + chalk.cyanBright(`${messages[language].inherit} ${finalAnswer?.inherit}`))
+      log('  ' + chalk.hex('#ffec3d')(`${messages[language].inherit} ${finalAnswer?.inherit}`))
     }
     // applicable elements
     if (finalAnswer?.["applicable elements"]) {
-      log(' ' + chalk.greenBright(`${messages[language].applicableElements} ${finalAnswer?.["applicable elements"]}\n`))
+      log('  ' + chalk.hex('#40a9ff')(`${messages[language].applicableElements} ${finalAnswer?.["applicable elements"]}\n`))
     }
     // desc & longDesc
     if (finalAnswer?.desc) {
-      log(` ${chalk.magentaBright(finalAnswer?.desc)}`)
+      log(chalk.hex('#b37feb')(finalAnswer?.desc))
     }
     if (finalAnswer?.longDesc) {
-      log(` ${chalk.blackBright(finalAnswer?.longDesc)}\n`)
+      log(`${chalk.blackBright(finalAnswer?.longDesc)}\n`)
     }
     //create the box with the code example
     if (finalAnswer?.grammar) {

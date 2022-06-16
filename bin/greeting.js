@@ -9,14 +9,14 @@ const log = console.log
 export const greeting = (language) => {
   //create initial message box
   const welcome =
-    chalk.yellow(' ✿ ') +
+    chalk.hex('#ffec3d')(' ✿ ') +
     chalk.cyanBright.bold(messages[language].hello) +
-    chalk.yellow(' ✿ ')
+    chalk.hex('#ffec3d')(' ✿ ')
 
   const welcomeBox = {
     padding: 1,
     margin: 1,
-    borderColor: 'yellowBright',
+    borderColor: '#36cfc9',
     backgroundColor: '#000000',
   }
   const msgBox = boxen(welcome, welcomeBox)

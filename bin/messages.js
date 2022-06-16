@@ -1,6 +1,6 @@
 export const messages = {
   "cn": {
-    "hello": "  你好 CSS 工具！",
+    "hello": "  你好 CSS 工具!",
     "input": "输入要查询的CSS属性:",
     "property": "选择你要查询的CSS属性:",
     "requiresInput": "你需要输入css属性",
