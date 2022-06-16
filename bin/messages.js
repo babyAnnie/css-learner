@@ -12,8 +12,8 @@ export const messages = {
   },
   "en": {
     "hello": "  Hello CSS tool! ",
-    "input": "Enter the CSS property to query:",
-    "property": "Select the CSS property you want to query:",
+    "input": "Enter a CSS property:",
+    "property": "Choose a CSS property:",
     "requiresInput": "You need to enter the css property",
     "initialValue": "Initial value:",
     "inherit": "Whether to inherit:",
