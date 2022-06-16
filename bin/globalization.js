@@ -1,8 +1,8 @@
 import inquirer from 'inquirer';
 
 import { greeting } from './greeting.js'
-import { generateQuestions, keysStr } from './questions.js'
-import { mdnCnAnswers, mdnEnAnswers } from './lookup.js'
+import { generateQuestions } from './questions.js'
+import { mdnCnAnswers, mdnEnAnswers, cnKeys, enKeys } from './lookup.js'
 import { logFinalAnswer } from './logFinalAnswer.js'
 
 
@@ -17,7 +17,8 @@ export const terminalQuery = (language = 'en') => {
     .prompt(questions)
     .then((answers) => {
       // console.log('answers', answers);
-      const { input, property } = answers
+      const { input, property } = answers,
+        keysStr = language === 'cn' ? cnKeys.join('') : enKeys.join('');
 
       // log the final answer
       if (keysStr.indexOf(input) === -1) {

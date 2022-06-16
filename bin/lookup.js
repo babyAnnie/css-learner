@@ -13,3 +13,7 @@ export const mdnCnAnswers = cnData;
 let enData = fs.readFileSync(`${__dirname}/mdn_en.json`).toString();
 enData = JSON.parse(enData) || {};
 export const mdnEnAnswers = enData;
+
+
+export const cnKeys = Object.keys(cnData);
+export const enKeys = Object.keys(enData);

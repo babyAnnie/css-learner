@@ -1,26 +1,22 @@
-import { mdnCnAnswers } from './lookup.js'
+import { cnKeys, enKeys } from './lookup.js'
 import { messages } from './messages.js';
-
-
-const keys = Object.keys(mdnCnAnswers)
-export const keysStr = keys.join('');
-
-
-const mdnChoices = (answers) => {
-  const input = answers["input"]
-  let result = []
-  for (let k of keys) {
-    if (k.indexOf(input) !== -1) {
-      // if (k.startsWith(input)) {
-      result.push(k)
-    }
-  }
-  return result
-}
 
 
 // language: cn | en
 export const generateQuestions = (language = 'en') => {
+  const keys = language === 'cn' ? cnKeys : enKeys,
+    mdnChoices = (answers) => {
+      const input = answers["input"]
+      let result = []
+      for (let k of keys) {
+        if (k.indexOf(input) !== -1) {
+          // if (k.startsWith(input)) {
+          result.push(k)
+        }
+      }
+      return result
+    }
+
   return [
     {
       type: 'input',
