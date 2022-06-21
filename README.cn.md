@@ -3,7 +3,8 @@
 [中文](https://github.com/babyAnnie/css-learner/blob/master/README.cn.md) | [English](https://github.com/babyAnnie/css-learner/blob/master/README.md)
 
 [![Version](https://runkit.io/bokub/npm-version/branches/master/css-learner?style=flat)](https://www.npmjs.com/package/css-learner)
-[![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg)](https://github.com/babyAnnie/css-learner/blob/master/LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/babyAnnie/css-learner/blob/master/LICENSE)
+![](https://visitor-badge.glitch.me/badge?page_id=babyAnnie.css-learner)
 
 > 无需深入研究文档即可找到您需要的CSS属性！ ✨
 

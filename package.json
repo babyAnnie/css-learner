@@ -16,7 +16,9 @@
     "node",
     "front-end",
     "terminal",
-    "tool"
+    "tool",
+    "console",
+    "log"
   ],
   "author": "DDY",
   "license": "MIT",
